@@ -109,7 +109,7 @@
     hash.update(prefix);
     save(hash);
     var char, methodId = keccak256.array(sig);
-    while (methodId[0] || methodId[1]) {
+    while (methodId[0] || methodId[1] || methodId[2]) {
       if (index >= CHARS.length) {
         increase(bytes);
         hash = keccak256.create();
